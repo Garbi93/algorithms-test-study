@@ -19,7 +19,6 @@ public class Solution2588 {
              listB.add(b);
              B = B / 10;
          }
-        System.out.println(listB);
 
         for (int i = 0; i < listB.size(); i++) {
             System.out.println(A * listB.get(i));
