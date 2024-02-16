@@ -1,4 +1,4 @@
-package main.algorithms;
+package main.divide;
 
 // 입력받은 정수값 빼기
 

@@ -1,4 +1,4 @@
-package main.algorithms;
+package main.divide;
 
 // 사칙연산 및 연산자 우선순위
 

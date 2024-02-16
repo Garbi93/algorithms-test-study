@@ -1,4 +1,4 @@
-package main.algorithms;
+package main.divide;
 
 import java.io.*;
 
