@@ -2,7 +2,7 @@ package main.String;
 
 import java.util.Scanner;
 
-// TODO : 알파벳 찾기 풀이중 막힘
+// 알파벳 찾기
 public class Solution10809 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -10,22 +10,22 @@ public class Solution10809 {
         String[] arrInputStrings = inputString.split("");
 
         int[] arrIsThereValue = new int[26];
-        for (int i = 0; i <= arrIsThereValue.length; i++) {
+        for (int i = 0; i < arrIsThereValue.length; i++) {
             arrIsThereValue[i] = -1;
         }
 
         for (int i = 'a'; i <= 'z'; i++) {
             for (int j = 0; j < arrInputStrings.length; j++) {
-//                System.out.println(arrInputStrings[j]);
-//                System.out.println((char)i);
-//                System.out.println(arrInputStrings[j].equals(String.valueOf((char)i)));
                 if (arrInputStrings[j].equals(String.valueOf((char)i))) {
-                    arrIsThereValue[i] = j;
+                    arrIsThereValue[i - 'a'] = j;
+                    // 처음 만난 곳에서 탈출 시키기
+                    break;
+
                 }
             }
         }
-        for (int i = 0; i <= 26; i++) {
-            System.out.println(arrIsThereValue[i] + " ");
+        for (int i = 0; i < arrIsThereValue.length; i++) {
+            System.out.print(arrIsThereValue[i] + " ");
         }
 
     }
